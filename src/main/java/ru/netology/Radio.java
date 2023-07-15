@@ -4,15 +4,15 @@ public class Radio {
     private int currentRadioStation;
     private int currentVolume;
 
-    public int getCurrentRadioStation(){
+    public int getCurrentRadioStation() {
         return currentRadioStation;
     }
 
-    public void setCurrentRadioStation(int newCurrentRadioStation){
-        if (newCurrentRadioStation < 0){
+    public void setCurrentRadioStation(int newCurrentRadioStation) {
+        if (newCurrentRadioStation < 0) {
             return;
         }
-        if (newCurrentRadioStation > 9){
+        if (newCurrentRadioStation > 9) {
             return;
         }
         currentRadioStation = newCurrentRadioStation;
@@ -22,20 +22,21 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int newCurrentVolume){
-        if (newCurrentRadioStation < 0){
+    public void setCurrentVolume(int newCurrentVolume) {
+        if (newCurrentVolume < 0) {
             return;
         }
-        if (newCurrentRadioStation > 100){
+        if (newCurrentVolume > 100) {
             return;
         }
         currentVolume = newCurrentVolume;
     }
-    public void nextRadioStation(){
-        if (currentRadioStation <9){
-            currentRadioStation = currentRadioStation +1;
+
+    public void nextRadioStation() {
+        if (currentRadioStation < 9) {
+            currentRadioStation = currentRadioStation + 1;
         }
-        if (currentRadioStation == 9){
+        if (currentRadioStation == 9) {
             currentRadioStation = 0;
         }
     }
@@ -53,7 +54,7 @@ public class Radio {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume == 100){
+        if (currentVolume == 100) {
             return;
         }
     }
@@ -62,7 +63,7 @@ public class Radio {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
-        if (currentVolume == 0){
+        if (currentVolume == 0) {
             return;
         }
     }

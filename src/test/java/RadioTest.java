@@ -20,7 +20,7 @@ public class RadioTest {
     public void shouldNotSetRadioStationAboveMax(){
         Radio rad = new Radio();
 
-        rad.setCurrentRadioStation(100);
+        rad.setCurrentRadioStation(10);
 
         int expected = 0;
         int actual = rad.getCurrentRadioStation();
@@ -102,10 +102,30 @@ public class RadioTest {
     }
 
     @Test
+    public void boundaryValueSetCurrentVolume() {
+        Radio rad = new Radio();
+
+        rad.setCurrentVolume(101);
+        int expected = 0;
+        int actual = rad.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+        @Test
+        public void boundaryNegativeValueSetCurrentVolume() {
+        Radio rad = new Radio();
+        rad.setCurrentVolume(-1);
+        int expected = 0;
+        int actual = rad.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
     public void shouldVolumeUp(){
         Radio rad = new Radio();
 
-        rad.currentVolume = 55;
+        rad.setCurrentVolume(55);
 
         rad.increaseVolume();
 
@@ -120,7 +140,7 @@ public class RadioTest {
     public void shouldVolumeDown(){
         Radio rad = new Radio();
 
-        rad.currentVolume = 72;
+        rad.setCurrentVolume(72);
 
         rad.decreaseVolume();
 
@@ -135,7 +155,7 @@ public class RadioTest {
     public void shouldNotSetVolumeUpAboveMax(){
         Radio rad = new Radio();
 
-        rad.currentVolume = 100;
+        rad.setCurrentVolume(100);
 
         rad.increaseVolume();
 
@@ -150,7 +170,7 @@ public class RadioTest {
     public void shouldNotSetVolumeDownBelowMin(){
         Radio rad = new Radio();
 
-        rad.currentVolume = 0;
+        rad.setCurrentVolume(0);
 
         rad.decreaseVolume();
 
