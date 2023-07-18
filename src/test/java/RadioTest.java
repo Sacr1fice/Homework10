@@ -180,4 +180,34 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void testBoundaryValuesToPrevSwitch(){
+        Radio rad = new Radio();
+
+        rad.setCurrentRadioStation(1);
+
+        rad.prevRadioStation();
+
+        int expected = 0;
+        int actual = rad.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testBoundaryValuesToNextSwitch(){
+        Radio rad = new Radio();
+
+        rad.setCurrentRadioStation(8);
+
+        rad.nextRadioStation();
+
+        int expected = 9;
+        int actual = rad.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
