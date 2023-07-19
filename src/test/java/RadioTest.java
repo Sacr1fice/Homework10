@@ -5,7 +5,7 @@ import ru.netology.Radio;
 public class RadioTest {
 
     @Test
-    public void shouldSetRadioStation(){
+    public void shouldSetRadioStation() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(7);
@@ -17,7 +17,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetRadioStationAboveMax(){
+    public void shouldNotSetRadioStationAboveMax() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(10);
@@ -29,7 +29,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetRadioStationBelowMin(){
+    public void shouldNotSetRadioStationBelowMin() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(-1);
@@ -42,7 +42,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldRadioSwitchToNextStation(){
+    public void shouldRadioSwitchToNextStation() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(2);
@@ -57,7 +57,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldRadioSwitchToPrevStation(){
+    public void shouldRadioSwitchToPrevStation() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(5);
@@ -72,7 +72,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldRadioSwitchToNextStationAboveMax(){
+    public void shouldRadioSwitchToNextStationAboveMax() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(9);
@@ -87,7 +87,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldRadioSwitchToPrevStationBelowMin(){
+    public void shouldRadioSwitchToPrevStationBelowMin() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(0);
@@ -112,8 +112,9 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
-        @Test
-        public void boundaryNegativeValueSetCurrentVolume() {
+
+    @Test
+    public void boundaryNegativeValueSetCurrentVolume() {
         Radio rad = new Radio();
         rad.setCurrentVolume(-1);
         int expected = 0;
@@ -121,8 +122,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldVolumeUp(){
+    public void shouldVolumeUp() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(55);
@@ -137,7 +139,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldVolumeDown(){
+    public void shouldVolumeDown() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(72);
@@ -152,7 +154,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetVolumeUpAboveMax(){
+    public void shouldNotSetVolumeUpAboveMax() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(100);
@@ -167,7 +169,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetVolumeDownBelowMin(){
+    public void shouldNotSetVolumeDownBelowMin() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(0);
@@ -182,7 +184,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testBoundaryValuesToPrevSwitch(){
+    public void testBoundaryValuesToPrevSwitch() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(1);
@@ -197,7 +199,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testBoundaryValuesToNextSwitch(){
+    public void testBoundaryValuesToNextSwitch() {
         Radio rad = new Radio();
 
         rad.setCurrentRadioStation(8);

@@ -36,20 +36,20 @@ public class Radio {
     public void nextRadioStation() {
         if (currentRadioStation <= 8) {
             currentRadioStation = currentRadioStation + 1;
+        } else {
+            currentRadioStation = 0;
         }
-        else currentRadioStation = 0;
-        }
-
+    }
 
     public void prevRadioStation() {
         if (currentRadioStation >= 1) {
             currentRadioStation = currentRadioStation - 1;
+        } else {
+            currentRadioStation = 9;
         }
-        else currentRadioStation = 9;
     }
-
     public void increaseVolume() {
-        if (currentVolume <100) {
+        if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
         if (currentVolume == 100) {
